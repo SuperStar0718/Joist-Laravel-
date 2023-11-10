@@ -132,7 +132,7 @@ The above copyright notice and this permission notice shall be included in all c
                             </div>
                         </a>
                         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-                            {{ __('Creative Tim') }}
+                            {{ __('Joist Dashboard') }}
                         </a>
                     </div>
                     <div class="sidebar-wrapper">
@@ -140,14 +140,14 @@ The above copyright notice and this permission notice shall be included in all c
                             <li>
                                 <a href="{{ route('page.index', 'dashboard') }}">
                                     <i class="nc-icon nc-bank"></i>
-                                    <p>{{ __('Dashboard') }}</p>
+                                    <p>{{ __('Estimate') }}</p>
                                 </a>
                             </li>
-                            <li >
+                            {{-- <li >
                                 <a data-toggle="collapse" aria-expanded="true" href="#laravelExamples">
                                     <i class="nc-icon"><img src="{{ asset('paper/img/laravel.svg') }}"></i>
                                     <p>
-                                            {{ __('Laravel examples') }}
+                                            {{ __('Invoices') }}
                                         <b class="caret"></b>
                                     </p>
                                 </a>
@@ -167,35 +167,41 @@ The above copyright notice and this permission notice shall be included in all c
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
+                            </li> --}}
                             <li >
                                 <a href="{{ route('page.index', 'icons') }}">
                                     <i class="nc-icon nc-diamond"></i>
-                                    <p>{{ __('Icons') }}</p>
+                                    <p>{{ __('Invoices') }}</p>
                                 </a>
                             </li>
                             <li >
                                 <a href="{{ route('page.index', 'map') }}">
                                     <i class="nc-icon nc-pin-3"></i>
-                                    <p>{{ __('Maps') }}</p>
+                                    <p>{{ __('Clients') }}</p>
                                 </a>
                             </li>
                             <li >
                                 <a href="{{ route('page.index', 'notifications') }}">
                                     <i class="nc-icon nc-bell-55"></i>
-                                    <p>{{ __('Notifications') }}</p>
+                                    <p>{{ __('Items') }}</p>
                                 </a>
                             </li>
                             <li >
                                 <a href="{{ route('page.index', 'tables') }}">
                                     <i class="nc-icon nc-tile-56"></i>
-                                    <p>{{ __('Table List') }}</p>
+                                    <p>{{ __('Joist Pro') }}</p>
                                 </a>
                             </li>
                             <li >
                                 <a href="{{ route('page.index', 'typography') }}">
                                     <i class="nc-icon nc-caps-small"></i>
-                                    <p>{{ __('Typography') }}</p>
+                                    <p>{{ __('Reports') }}</p>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="{{ route('page.index', 'typography') }}">
+                                    <i class="nc-icon nc-caps-small"></i>
+                                    <p>{{ __('Settings') }}</p>
                                 </a>
                             </li>
                             {{-- <li class="active-pro {{ $elementActive == 'upgrade' ? 'active' : '' }}">
@@ -218,7 +224,7 @@ The above copyright notice and this permission notice shall be included in all c
                             <span class="navbar-toggler-bar bar3"></span>
                         </button>
                     </div>
-                    <a class="navbar-brand" href="#pablo">{{ __('Paper Dashboard') }}</a>
+                    <a class="navbar-brand" href="#pablo">{{ __('Joist Dashboard') }}</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                     aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">

@@ -1,6 +1,6 @@
 @extends('layouts.app', [
     'class' => 'register-page',
-    'backgroundImagePath' => 'img/bg/jan-sendereks.jpg'
+    'backgroundImagePath' => 'images/home8.jpg'
 ])
 
 @section('content')
@@ -128,7 +128,7 @@
                                     @endif
                                 </div>
                                 <div class="card-footer ">
-                                    <button type="submit" class="btn btn-info btn-round">{{ __('Get Started') }}</button>
+                                    <button type="submit" class="btn primary-color primary-hover btn-round">{{ __('Get Started') }}</button>
                                 </div>
                             </form>
                         </div>

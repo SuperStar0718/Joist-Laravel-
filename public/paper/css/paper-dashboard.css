@@ -2117,7 +2117,7 @@ fieldset[disabled] .btn-link.active {
 .input-group-focus .input-group-prepend .input-group-text,
 .input-group-focus .input-group-append .input-group-text {
   background-color: #FFFFFF;
-  border-color: #9A9A9A;
+  border-color: #56A114;
 }
 
 .input-group-focus.no-border .input-group-prepend .input-group-text,
@@ -2370,12 +2370,12 @@ h6 {
 }
 
 a {
-  color: #51cbce;
+  color: #67c118;
 }
 
 a:hover,
 a:focus {
-  color: #51cbce;
+  color: #67c118;
 }
 
 h1,
@@ -2888,7 +2888,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
 }
 
 .form-check-label input[type="checkbox"]:checked+.form-check-sign:before {
-  background-color: #66615B;
+  background-color: #67c118;
 }
 
 .form-check-radio input[type="radio"]+.form-check-sign:after,
@@ -4798,7 +4798,6 @@ License - nucleoapp.com/license/
   font-size: 12px;
   padding: 10px 8px;
   line-height: 30px;
-  opacity: .7;
 }
 
 .sidebar .nav li .nav>li>a,
@@ -4991,15 +4990,17 @@ License - nucleoapp.com/license/
 .off-canvas-sidebar[data-color="white"] .nav li a[data-toggle="collapse"] i,
 .off-canvas-sidebar[data-color="white"] .nav li a[data-toggle="collapse"]~div>ul>li .sidebar-mini-icon,
 .off-canvas-sidebar[data-color="white"] .nav li a[data-toggle="collapse"]~div>ul>li>a {
-  color: #66615B;
-  opacity: .7;
+  color: black;
+  font-weight: bold;
 }
 
 .sidebar[data-color="white"] .nav li:hover:not(.active)>a,
+.sidebar[data-color="white"] .nav li:hover:not(.active)>a>i,
 .sidebar[data-color="white"] .nav li:focus:not(.active)>a,
 .off-canvas-sidebar[data-color="white"] .nav li:hover:not(.active)>a,
 .off-canvas-sidebar[data-color="white"] .nav li:focus:not(.active)>a {
   opacity: 1;
+  color: #67c118 !important;
 }
 
 [data-background-color]:not([data-background-color="gray"]) .description,
@@ -6823,7 +6824,7 @@ License - nucleoapp.com/license/
     left: 0;
     top: 0;
     content: "";
-    background-color: rgba(0, 0, 0, 0.7); }
+    background-color: rgba(0, 0, 0, 0.3); }
   .section-image .container {
     z-index: 2;
     position: relative; }
