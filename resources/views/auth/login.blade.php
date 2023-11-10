@@ -23,7 +23,7 @@
                                         <i class="nc-icon nc-single-02"></i>
                                     </span>
                                 </div>
-                                <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}" type="email" name="email" value="{{ old('email') }}" required autofocus>
+                                <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}" type="email" name="email" value="{{ old('email') }}" required >
                                 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" style="display: block;" role="alert">
@@ -60,15 +60,15 @@
 
                         <div class="card-footer">
                             <div class="text-center">
-                                <button type="submit" class="btn primary-color  btn-round mb-3">{{ __('Sign in') }}</button>
+                                <button type="submit" class="btn primary-color primary-hover   btn-round mb-3">{{ __('Sign in') }}</button>
                             </div>
                         </div>
                     </div>
                 </form>
-                <a href="{{ route('password.request') }}" class="btn btn-link">
+                <a href="{{ route('password.request') }}" class="btn btn-link primary-hover">
                     {{ __('Forgot password') }}
                 </a>
-                <a href="{{ route('register') }}" class="btn btn-link float-right">
+                <a href="{{ route('register') }}" class="btn btn-link float-right primary-hover">
                     {{ __('Create Account') }}
                 </a>
             </div>

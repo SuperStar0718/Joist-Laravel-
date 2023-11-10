@@ -6,43 +6,9 @@
 @section('content')
     <div class="content">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-5 ml-auto">
-                    <div class="info-area info-horizontal mt-5">
-                        <div class="icon icon-primary">
-                            <i class="nc-icon nc-tv-2"></i>
-                        </div>
-                        <div class="description">
-                            <h5 class="info-title">{{ __('Marketing') }}</h5>
-                            <p class="description">
-                                {{ __('We\'ve created the marketing campaign of the website. It was a very interesting collaboration.') }}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="info-area info-horizontal">
-                        <div class="icon icon-primary">
-                            <i class="nc-icon nc-html5"></i>
-                        </div>
-                        <div class="description">
-                            <h5 class="info-title">{{ __('Fully Coded in HTML5') }}</h5>
-                            <p class="description">
-                                {{ __('We\'ve developed the website with HTML5 and CSS3. The client has access to the code using GitHub.') }}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="info-area info-horizontal">
-                        <div class="icon icon-info">
-                            <i class="nc-icon nc-atom"></i>
-                        </div>
-                        <div class="description">
-                            <h5 class="info-title">{{ __('Built Audience') }}</h5>
-                            <p class="description">
-                                {{ __('There is also a Fully Customizable CMS Admin Dashboard for this product.') }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mr-auto">
+            <div class="row ">
+               
+                <div class="col-lg-4 col-md-6 m-auto">
                     <div class="card card-signup text-center">
                         <div class="card-header ">
                             <h4 class="card-title">{{ __('Register') }}</h4>
@@ -68,7 +34,7 @@
                                             <i class="nc-icon nc-single-02"></i>
                                         </span>
                                     </div>
-                                    <input name="name" type="text" class="form-control" placeholder="Name" value="{{ old('name') }}" required autofocus>
+                                    <input name="name" type="text" class="form-control" placeholder="Name" value="{{ old('name') }}" required >
                                     @if ($errors->has('name'))
                                         <span class="invalid-feedback" style="display: block;" role="alert">
                                             <strong>{{ $errors->first('name') }}</strong>
