@@ -1,9 +1,0 @@
-.primary-color{
-    background-color: #67c118;
-}
-.primary-hover:hover{
-    background-color: #56A114 !important;
-}
-.form-control:focus{
-    border-color: #67c118;
-}
