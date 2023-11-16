@@ -11,10 +11,18 @@ import chart from '@images/cards/chart-success.png'
 import card from '@images/cards/credit-card-primary.png'
 import paypal from '@images/cards/paypal-error.png'
 import wallet from '@images/cards/wallet-info.png'
+import loadingScreen from './loading.vue'
+
+import store from '@/store'
+const user = store.state.user
+const loading = store.state.loading
+console.log(user)
+console.log(loading)
 </script>
 
 <template>
-  <VRow>
+  <loadingScreen v-if="loading" />
+  <VRow v-else>
     <!-- 👉 Congratulations -->
     <VCol
       cols="12"

@@ -1,4 +1,6 @@
 <script setup>
+import router from '@/router'
+import store from '@/store'
 import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
 import logo from '@images/logo.svg?raw'
 
@@ -10,6 +12,33 @@ const form = ref({
 })
 
 const isPasswordVisible = ref(false)
+function register(e) {
+  e.preventDefault()
+
+  const { username, email, password, privacyPolicies } = form.value
+  if (!username ||!email ||!password) {
+    return
+  }
+  
+  store
+    .dispatch('register', {
+      username,
+      email,
+      password,
+    })
+    .then(()=>{
+      router.push({
+        name: 'dashboard',
+      })
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+
+  
+  
+  
+}
 </script>
 
 <template>
@@ -43,7 +72,7 @@ const isPasswordVisible = ref(false)
       </VCardText>
 
       <VCardText>
-        <VForm @submit.prevent="$router.push('/')">
+        <VForm @submit="register">
           <VRow>
             <!-- Username -->
             <VCol cols="12">
@@ -53,6 +82,7 @@ const isPasswordVisible = ref(false)
                 label="Username"
                 placeholder="Johndoe"
               />
+              
             </VCol>
             <!-- email -->
             <VCol cols="12">

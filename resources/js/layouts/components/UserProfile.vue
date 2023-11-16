@@ -1,5 +1,24 @@
 <script setup>
+import router from '@/router'
+import store from '@/store'
 import avatar1 from '@images/avatars/avatar-1.png'
+
+//function to logout
+function logout() {
+  //call logout action
+  store.dispatch('logout')
+    .then(()=>{
+    //redirect to login page
+      router.push({
+        name: 'login',
+      })
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+
+
+}
 </script>
 
 <template>
@@ -110,7 +129,7 @@ import avatar1 from '@images/avatars/avatar-1.png'
           <VDivider class="my-2" />
 
           <!-- 👉 Logout -->
-          <VListItem to="/login">
+          <VListItem @click="logout">
             <template #prepend>
               <VIcon
                 class="me-2"

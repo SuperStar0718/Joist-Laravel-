@@ -1,6 +1,9 @@
 <script setup>
+import router from '@/router'
+import store from '@/store'
 import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
 import logo from '@images/logo.svg?raw'
+import loadingScreen from './loading.vue'
 
 const form = ref({
   email: '',
@@ -9,10 +12,37 @@ const form = ref({
 })
 
 const isPasswordVisible = ref(false)
+const loading = store.state.loading
+
+//write login function
+function login(e) {
+  e.preventDefault()
+
+  const { email, password, remember } = form.value
+  if (!email ||!password) {
+    return
+  }
+  
+  store
+    .dispatch('login', {
+      email,
+      password,
+      remember,
+    })
+    .then(()=>{
+      router.push({
+        name: 'dashboard',
+      })
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+}
 </script>
 
 <template>
-  <div class="auth-wrapper d-flex align-center justify-center pa-4">
+  <loadingScreen v-if="loading" />
+  <div v-else class="auth-wrapper d-flex align-center justify-center pa-4">
     <VCard
       class="auth-card pa-4 pt-7"
       max-width="448"
@@ -42,7 +72,7 @@ const isPasswordVisible = ref(false)
       </VCardText>
 
       <VCardText>
-        <VForm @submit.prevent="$router.push('/')">
+        <VForm @submit="login">
           <VRow>
             <!-- email -->
             <VCol cols="12">
