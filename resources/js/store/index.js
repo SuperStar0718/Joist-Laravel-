@@ -33,10 +33,12 @@ const store = createStore({
   actions: {
 
     register({ commit }, user) {
+      commit('setLoading', true)
       return axiosClient.post('/register', user)
         .then(({ data }) => {
           commit('setUser', data.user)
           commit('setToken', data.token)
+          commit('setLoading', false)
           
           return data
         })
