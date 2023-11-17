@@ -29,64 +29,27 @@ const tabs = [
 
 <template>
   <div>
-    <VRow
-      class="mb-1 mx-0"
-      align="center"
-      justify="space-between"
-    >
-      <VTabs
-        v-model="activeTab"
-        show-arrows
-      >
-        <VTab
-          v-for="item in tabs"
-          :key="item.icon"
-          :value="item.tab"
-        >
-          <VIcon
-            size="20"
-            start
-            :icon="item.icon"
-          />
+    <VRow class="mb-1 mx-0" align="center" justify="space-between">
+      <VTabs v-model="activeTab" show-arrows>
+        <VTab v-for="item in tabs" :key="item.icon" :value="item.tab">
+          <VIcon size="20" start :icon="item.icon" />
           {{ item.title }}
         </VTab>
       </VTabs>
-     
-      <VRow
-        align="center"
-        justify="end"
-        class="gap-2"
-      >
-        <VBtn
-          color="primary"
-          text
-        >
-          <VIcon
-            size="20"
-            start
-            icon="bx-printer"
-          />
+
+      <VRow align="center" justify="end" class="gap-2">
+        <VBtn color="primary" text>
+          <VIcon size="20" start icon="bx-printer" />
           Export
         </VBtn>
-        <VBtn
-          color="primary"
-          text
-          @click="$router.push({ name: 'new_estimate' })"
-        >
-          <VIcon
-            size="20"
-            start
-            icon="bx-plus-circle"
-          />
+        <VBtn color="primary" text @click="$router.push({ name: 'new_estimate' })">
+          <VIcon size="20" start icon="bx-plus-circle" />
           New Estimate
         </VBtn>
       </VRow>
       <VDivider />
 
-      <VWindow
-        v-model="activeTab"
-        class="mt-5 disable-tab-transition"
-      >
+      <VWindow v-model="activeTab" class="mt-5 disable-tab-transition">
         <!-- Account -->
         <VWindowItem value="pending">
           <AccountSettingsAccount />

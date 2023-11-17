@@ -7,7 +7,7 @@ const text = ref(''); // data property
 const rows = computed(() => (text.value.match(/\n/g) || '').length + 1); // computed property
 
 const rate = ref(0)
-const quantity = ref('1')
+const quantity = ref(1)
 const total = computed(() => (rate * quantity))
 </script>
 <template>
@@ -24,7 +24,7 @@ const total = computed(() => (rate * quantity))
       </VCol>
       <VCol cols="2" class="p-0">
         <div class="p-3">
-          {{ taotal }}
+          {{ total }}
         </div>
       </VCol>
     </div>
