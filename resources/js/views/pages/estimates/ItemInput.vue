@@ -15,5 +15,5 @@ const { type, classname, placeholder } = defineProps({
 });
 </script>
 <template>
-  <input :class="classname" class="item-input" :type="type" :placeholder="placeholder" />
+  <input :class="classname" class="item-input p-3" :type="type" :placeholder="placeholder" />
 </template>
